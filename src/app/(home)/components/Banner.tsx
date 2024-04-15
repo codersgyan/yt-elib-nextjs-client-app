@@ -1,14 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
-import PaperBg from '../../public/paper-bg.jpg';
-import BookImage from '../../public/book.png';
 
 const Banner = () => {
     return (
         <div className="mx-auto max-w-7xl px-5 py-10">
             <div className="relative">
                 <Image
-                    src={PaperBg}
+                    src={'/paper-bg.jpg'}
                     alt="billboard"
                     className="h-72 w-full rounded-lg"
                     height={0}
@@ -17,7 +15,7 @@ const Banner = () => {
                 />
                 <div className="absolute inset-0 h-full w-full rounded-lg bg-gray-950 opacity-30" />
                 <Image
-                    src={BookImage}
+                    src={'/book.png'}
                     alt="billboard"
                     className="absolute bottom-0 right-5"
                     height={0}
