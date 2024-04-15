@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Banner = () => {
     return (
-        <div className="mx-auto max-w-7xl px-5 py-10">
+        <div className="mx-auto max-w-7xl py-10">
             <div className="relative">
                 <Image
                     src={'/paper-bg.jpg'}
