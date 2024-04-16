@@ -7,7 +7,11 @@ const SingleBookPage = async ({ params }: { params: { bookId: string } }) => {
     console.log('params', params);
     let book: Book | null = null;
     try {
-        const response = await fetch(`${process.env.BACKEND_URL}/books/${params.bookId}`);
+        const response = await fetch(`${process.env.BACKEND_URL}/books/${params.bookId}`, {
+            next: {
+                revalidate: 3600,
+            },
+        });
         if (!response.ok) {
             throw new Error('Error fetching book');
         }
